@@ -1,32 +1,41 @@
-#ifndef CLINIC_H_INCLUDED
-#define CLINIC_H_INCLUDED
-#include "STD_TYPES.h"
-#include <time.h>
+/***********************************************/
+/* Author: Hend and Husam */
+/* Date: 11-11-2020*/
+/* version: 1*/
+/* Description: Interfaces*/
+/***********************************************/
+
+
+#include "STD_Types.h"
+typedef struct{
+    uint32 IDtime;
+    uint8 * slot;
+
+}TIMES;
 typedef struct {
-	char name[16];
-	int age;
-	char gender;
-	int ID;
-	char*desiredSlot;
-
-
+	uint8 u8IndexOfPatientStruct;
+	uint32 u32IdOfPatient;
+	
+}CheckAndReturnIndex;
+typedef struct {
+	uint8 u8GenderOfPatient;
+	uint8  *u8DesiredSlot;
+	uint16 u16AgeOfPatient;
+	uint32 u32IdOfPatient;
+	uint8 u8NameOfPatient[1000];
+	
+	
 }Patient;
 
-typedef struct{
-    int IDtime;
-    char*slot;
-
-}TIME;
 uint8 clinicU8EnterPassword(void);
-void clinicVoidAddPatient(Patient * patientCpy,int index);
-char chechId(int idCpy, Patient * p,int index);
 void clinicVoidShowOptions(void);
-void copyText(char txt1[50],char txt2[50]);
-void clinicVoidEditPatient(int ID,int index);
-void showTimeSlots(index,times,patient);
-void userOptions(Patient*p ,int index);
+uint8 chechId(uint32 u32IdCpy);
+void clinicVoidAddPatient();
+void clinicVoidEditPatient(uint32 u32IDCpy);
+void clinicVoidcopyText(uint8 u8Txt1Cpy[1000],uint8 u8Txt2Cpy[1000]);
+uint8 u8GetIndexOfPatient(uint32 u32IdOfPatientCpy);
+void clinicVoidShowTimeSlots(TIMES * times, Patient * p);
+void clinicVoidCancelReservation(TIMES * time, Patient * p);
+void viewPatientRecord(Patient * p);
+void viewReservations(Patient * p);
 void delay(int number_of_seconds);
-void cancelReservation(TIME*t,Patient*p,int index);
-void viewReservations(void);
-
-#endif // CLINIC_H_INCLUDED
