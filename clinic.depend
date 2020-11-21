@@ -1,0 +1,29 @@
+# depslib dependency file v1.0
+1605738406 source:c:\users\antr\desktop\clinic\main.c
+	<stdio.h>
+	<stdlib.h>
+	"STD_TYPES.h"
+	"clinic.h"
+	<time.h>
+	<stdio.h>
+	<stdlib.h>
+	"STD_Types.h"
+	"clinic.h"
+
+1605741217 c:\users\antr\desktop\clinic\clinic.h
+	"STD_TYPES.h"
+	<time.h>
+
+1605448830 c:\users\antr\desktop\clinic\std_types.h
+
+1605741631 source:c:\users\antr\desktop\clinic\clinic.c
+	<stdio.h>
+	<stdlib.h>
+	"clinic.h"
+	"STD_TYPES.h"
+	<time.h>
+	<stdio.h>
+	<stdlib.h>
+	"STD_Types.h"
+	"clinic.h"
+
